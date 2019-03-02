@@ -1,0 +1,28 @@
+{
+  "name": "coach",
+  "version": "1.0.0",
+  "description": "Escuchador de Eventos",
+  "main": "coach.js",
+  "scripts": {
+    "test": "node coach.js",
+    "start": "node coach.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrisTovilla/NodeCS.git"
+  },
+  "author": "Cristopher/Marco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrisTovilla/NodeCS/issues"
+  },
+  "homepage": "https://github.com/CrisTovilla/NodeCS#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0",
+    "http": "0.0.0",
+    "net": "^1.0.2",
+    "os": "^0.1.1",
+    "pg": "^7.4.1"
+  }
+}
