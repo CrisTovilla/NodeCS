@@ -18,8 +18,8 @@ for (var k in interfaces) {
 }
 
 
-var HOST = '127.0.0.1';
-var PORT = 5000;
+var HOST = '134.209.76.81';
+var PORT = 1001;
 server.listen(5678);
 var web_sockets = [];
 
