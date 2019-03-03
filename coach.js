@@ -18,7 +18,7 @@ for (var k in interfaces) {
 }
 
 
-var HOST = '134.209.76.81';
+var HOST = '127.0.0.1';
 var PORT = 1001;
 server.listen(0001);
 var web_sockets = [];
@@ -28,7 +28,12 @@ var web_sockets = [];
 
 io.on('connection', function(socket) {
     web_sockets.push(socket)
-
+    console.log(socket.client.conn.remoteAddress," Connected")
+    socket.emit('login', { msg: 'Hello Client!!' });
+    socket.on('msg', function (data) {
+      console.log(data);
+    });
+    
     socket.on('disconnect', function() {
           var idx = web_sockets.indexOf(socket);
           if (idx != -1) {
@@ -62,8 +67,5 @@ io.on('error',function(err){
 
 net.createServer(function(sock) {
     console.log('CONNECTED: ' + sock.remoteAddress +':'+ sock.remotePort);    
-    sock.on('data', function(data) {
-    });
-
 }).listen(PORT, HOST);
 
