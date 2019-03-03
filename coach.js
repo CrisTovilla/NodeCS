@@ -66,6 +66,6 @@ io.on('error',function(err){
 
 
 net.createServer(function(sock) {
-    console.log('CONNECTED: ' + sock.remoteAddress +':'+ sock.remotePort);    
+    console.log('CONNECTED CLIENT FROM : ' + sock.remoteAddress +':'+ sock.remotePort);
 }).listen(PORT, HOST);
 
