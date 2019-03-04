@@ -20,7 +20,7 @@ for (var k in interfaces) {
 
 var HOST = '134.209.76.81';
 var PORT = 1001;
-server.listen(0001);
+server.listen(5001);
 var web_sockets = [];
 
 
@@ -29,11 +29,10 @@ var web_sockets = [];
 io.on('connection', function(socket) {
     web_sockets.push(socket)
     console.log(socket.client.conn.remoteAddress," Connected")
-    socket.emit('login', { msg: 'Hello Client!!' });
+    socket.emit('marker', { latitude: '16.614629',longitude: '-93.089273' });
     socket.on('msg', function (data) {
       console.log(data);
     });
-    
     socket.on('disconnect', function() {
           var idx = web_sockets.indexOf(socket);
           if (idx != -1) {
