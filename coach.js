@@ -28,15 +28,17 @@ var web_sockets = [];
 
 io.on('connection', function(socket) {
     web_sockets.push(socket)
-    console.log(socket.client.conn.remoteAddress," Connected")
+    console.log(socket.request.connection.remoteAddress," Connected")
     socket.emit('marker', { latitude: '16.614629',longitude: '-93.089273' });
-    socket.on('msg', function (data) {
-      console.log(data);
+    socket.on('location', function (data) {
+      console.log("Location at latitude:",data.latitude," longitude:",data.longitude);  
+      socket.emit('marker', { latitude: data.latitude,longitude: data.longitude });
     });
     socket.on('disconnect', function() {
           var idx = web_sockets.indexOf(socket);
           if (idx != -1) {
             web_sockets.splice(idx, 1);
+            console.log(socket.request.connection.remoteAddress," Disconnected")
           }
     });
 
