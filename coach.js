@@ -32,7 +32,7 @@ io.on('connection', function(socket) {
     socket.emit('marker', { latitude: '16.614629',longitude: '-93.089273' });
     socket.on('location', function (data) {
       console.log("Location at latitude:",data.latitude," longitude:",data.longitude);  
-      socket.broadcast('marker', { latitude: data.latitude,longitude: data.longitude });
+      io.emit('marker', { latitude: data.latitude,longitude: data.longitude });
     });
     socket.on('disconnect', function() {
           var idx = web_sockets.indexOf(socket);
