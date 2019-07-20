@@ -1,2 +1,2 @@
 # NodeCS
-Node-Express application
+A simple Node-Express application
