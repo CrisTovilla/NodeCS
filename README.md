@@ -1,2 +1,2 @@
 # NodeCS
-A simple Node application Socket
+A simple Node-Express app
