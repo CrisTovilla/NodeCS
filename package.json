@@ -4,7 +4,7 @@
   "description": "Escuchador de Eventos",
   "main": "index.js",
   "scripts": {
-    "test": "npm install && call node_modules/.bin/mocha test/test.js",
+    "test": "mocha",
     "start": "node index.js"
   },
   "repository": {
