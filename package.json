@@ -1,7 +1,7 @@
 {
   "name": "index",
   "version": "1.0.0",
-  "description": "Escuchador de Eventos",
+  "description": "Node Mocha",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -11,14 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/CrisTovilla/NodeCS.git"
   },
-  "author": "Cristopher/Marco",
+  "author": "Cristopher",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CrisTovilla/NodeCS/issues"
   },
   "homepage": "https://github.com/CrisTovilla/NodeCS#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "sqlite": "^3.0.3"
   },
   "devDependencies": {
     "mocha": "6.2.0",
